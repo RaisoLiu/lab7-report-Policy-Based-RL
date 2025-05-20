@@ -1,3 +1,5 @@
 \section{Introduction}
 
-This is the introduction.
+這次的作業是基於 Policy base 的 Reinforcement Learning 方法，訓練一個 agent 來玩倒立擺 與 走路的遊戲。
+
+在這裡我們從「期望收益和」最大化開始創建原始的 Policy Gradient 方法，然後點出遇到的問題是，抽樣導致的 update 問題，可能會變成優化方向的偏誤，所以後續有了 Actor-Critic 的方法，來解決這個問題，接著我們處理了 樣本使用效率的問題設計了 PPO 的方法，但是 PPO 需要在新舊模型的 action 選擇上不能有太大的差異，所以我們使用 CLIP 的方法來保證這個關聯，最後考慮 GAE 來加速 Reward 的傳導，讓模型更新更有效率。
